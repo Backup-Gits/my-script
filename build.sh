@@ -66,6 +66,9 @@ COMPILER=aosp
 elif [ "$1" = "--neutron" ];
 then
 COMPILER=neutron
+elif [ "$1" = "--yuki" ];
+then
+COMPILER=yuki
 fi
 
 ##----------------------------------------------------------##
@@ -106,6 +109,12 @@ function cloneTC() {
 	git clone --depth=1  https://github.com/Neutron-Clang/neutron-toolchain.git clang
 	PATH="${KERNEL_DIR}/clang/bin:$PATH"
 	
+        elif [ $COMPILER = "yuki" ];
+        then
+        post_msg " Cloning Yuki Clang ToolChain "
+        git clone --depth=1 https://gitlab.com/klozz/Yuki-clang.git clang
+        PATH="${KERNEL_DIR}/clang/bin:$PATH"
+
 	elif [ $COMPILER = "proton" ];
 	then
 	post_msg " Cloning Proton Clang ToolChain "
