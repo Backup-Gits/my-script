@@ -55,7 +55,7 @@ make -j$(nproc --all) O=out ARCH=arm64 CROSS_COMPILE=$GCC64_DIR/bin/aarch64-none
 
 if [ -f "out/arch/arm64/boot/Image.gz" ] && [ -f "out/arch/arm64/boot/dtbo.img" ]; then
 echo -e "\nKernel compiled succesfully! Zipping up...\n"
-if ! git clone -q https://github.com/Excalibur-99/AnyKernel3 -b main; then
+if ! git clone -q https://github.com/Excalibur-99/AnyKernel3 -b master; then
 echo -e "\nCloning AnyKernel3 repo failed! Aborting..."
 exit 1
 fi
