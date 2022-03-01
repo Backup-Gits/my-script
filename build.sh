@@ -69,6 +69,9 @@ COMPILER=neutron
 elif [ "$1" = "--yuki" ];
 then
 COMPILER=yuki
+elif [ "$1" = "--vortex" ];
+then
+COMPILER=vortex
 fi
 
 ##----------------------------------------------------------##
@@ -113,6 +116,12 @@ function cloneTC() {
         then
         post_msg " Cloning Yuki Clang ToolChain "
         git clone --depth=1 https://gitlab.com/klozz/Yuki-clang.git clang
+        PATH="${KERNEL_DIR}/clang/bin:$PATH"
+
+        elif [ $COMPILER = "vortex" ];
+        then
+        post_msg " Cloning Yuki Clang ToolChain "
+        git clone --depth=1 https://github.com/vijaymalav564/vortex-clang.git clang
         PATH="${KERNEL_DIR}/clang/bin:$PATH"
 
 	elif [ $COMPILER = "proton" ];
