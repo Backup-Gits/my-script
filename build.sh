@@ -14,7 +14,7 @@ MODEL=Xiaomi
 DEVICE=Miatoll
 
 # Kernel Version Code
-VERSION=v1.2
+VERSION=v1.3
 
 # Kernel Defconfig
 DEFCONFIG=cust_defconfig
