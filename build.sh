@@ -127,7 +127,7 @@ function cloneTC() {
 	elif [ $COMPILER = "proton" ];
 	then
 	post_msg " Cloning Proton Clang ToolChain "
-	git clone --depth=1  https://github.com/kdrag0n/proton-clang.git clang
+	git clone --depth=1 https://gitlab.com/LeCmnGend/proton-clang.git clang
 	PATH="${KERNEL_DIR}/clang/bin:$PATH"
 	
 	elif [ $COMPILER = "eva" ];
