@@ -109,7 +109,7 @@ function cloneTC() {
         elif [ $COMPILER = "neutron" ];
 	then
 	post_msg " Cloning Neutron Clang ToolChain "
-	git clone --depth=1 https://github.com/Neutron-Clang/neutron-toolchain.git clang
+	git clone --depth=1 https://gitlab.com/dakkshesh07/neutron-clang.git clang
 	PATH="${KERNEL_DIR}/clang/bin:$PATH"
 	
         elif [ $COMPILER = "yuki" ];
