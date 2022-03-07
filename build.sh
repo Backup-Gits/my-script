@@ -133,8 +133,8 @@ function cloneTC() {
 	elif [ $COMPILER = "eva" ];
 	then
 	post_msg " Cloning Eva GCC ToolChain "
-	git clone --depth=1 https://github.com/mvaisakh/gcc-arm64.git -b gcc-new gcc64
-	git clone --depth=1 https://github.com/mvaisakh/gcc-arm.git -b gcc-new gcc32
+	git clone --depth=1 https://github.com/mvaisakh/gcc-arm64.git gcc64
+	git clone --depth=1 https://github.com/mvaisakh/gcc-arm.git gcc32
 	PATH=$KERNEL_DIR/gcc64/bin/:$KERNEL_DIR/gcc32/bin/:/usr/bin:$PATH
 	
 	elif [ $COMPILER = "aosp" ];
