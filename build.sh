@@ -120,7 +120,7 @@ function cloneTC() {
 
         elif [ $COMPILER = "vortex" ];
         then
-        post_msg " Cloning Yuki Clang ToolChain "
+        post_msg " Cloning Vortex Clang ToolChain "
         git clone --depth=1 https://github.com/vijaymalav564/vortex-clang.git clang
         PATH="${KERNEL_DIR}/clang/bin:$PATH"
 
